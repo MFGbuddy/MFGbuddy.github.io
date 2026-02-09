@@ -1,22 +1,710 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>MFGbuddy; Your AI-Powered Industrial Assistant</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Primary SEO -->
+  <title>MFGbuddy | AI Consulting Agency for Your Business (Pune, India)</title>
+  <meta name="description" content="MFGbuddy is an AI Consulting Agency helping any business improve real workflows with practical AI. AI Fitment Audit, Proof of Value, Implementation & Support. Pune, India." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://mfgbuddy.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MFGbuddy" />
+  <meta property="og:title" content="MFGbuddy | AI Consulting Agency for Your Business" />
+  <meta property="og:description" content="Process-first AI consulting for any business: Audit → Proof of Value → Implementation. Pune, India." />
+  <meta property="og:url" content="https://mfgbuddy.com/" />
+  <!-- Replace with a real image on your domain -->
+  <meta property="og:image" content="https://mfgbuddy.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MFGbuddy | AI Consulting Agency for Your Business" />
+  <meta name="twitter:description" content="Process-first AI consulting for any business: Audit → Proof of Value → Implementation." />
+  <meta name="twitter:image" content="https://mfgbuddy.com/og-image.jpg" />
+
+  <!-- Structured Data (Local SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MFGbuddy - AI Consulting Agency",
+    "description": "MFGbuddy is an AI consulting agency helping any business improve workflows using practical AI. Services include AI Fitment Audit, Proof of Value, Implementation, and Support.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Pune", "Maharashtra", "India", "Remote"],
+    "email": "ml.aniruddha.kudalkar@gmail.com",
+    "telephone": "+918511103337",
+    "url": "https://mfgbuddy.com/",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+918511103337",
+      "email": "ml.aniruddha.kudalkar@gmail.com",
+      "availableLanguage": ["English", "Marathi", "Hindi"]
+    }]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#9fb0d0;
+      --text:#e9f0ff;
+      --accent:#5eead4;
+      --accent2:#60a5fa;
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1000px 600px at 18% -10%, rgba(96,165,250,.26), transparent 60%),
+        radial-gradient(900px 520px at 92% 10%, rgba(94,234,212,.18), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{opacity:.95}
+    .container{max-width:var(--max); margin:0 auto; padding:0 16px}
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      left:16px; top:14px; width:auto; height:auto; padding:10px 12px;
+      background:#000; color:#fff; border-radius:10px; z-index:9999;
+    }
+
+    /* Nav */
+    header.nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.82);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+      min-width: 0;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(94,234,212,.95), rgba(96,165,250,.95));
+      box-shadow: 0 10px 30px rgba(94,234,212,.12);
+      border:1px solid rgba(255,255,255,.18);
+      flex:0 0 auto;
+    }
+    .brand-text{
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand-text .t1{
+      font-size:14px; opacity:.98;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .brand-text .t2{
+      font-size:12px; color:var(--muted); font-weight:900;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    nav{position:relative}
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:flex; gap:10px; align-items:center;
+      flex-wrap:wrap; justify-content:flex-end;
+    }
+    nav a{
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:14px;
+    }
+    nav a:hover{
+      color:var(--text);
+      border-color:rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid rgba(94,234,212,.45);
+      background: rgba(94,234,212,.08);
+      color:var(--text);
+      font-weight:900;
+      font-size:14px;
+      box-shadow: 0 10px 30px rgba(94,234,212,.08);
+      white-space:nowrap;
+    }
+    .cta:hover{background: rgba(94,234,212,.12)}
+
+    /* Mobile menu */
+    .menu-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .menu-btn:hover{background:rgba(255,255,255,.06)}
+    .menu-btn svg{width:20px; height:20px}
+
+    /* Hero */
+    main{padding-bottom:40px}
+    .hero{padding:42px 0 22px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+    .pill b{color:var(--text)}
+    h1{
+      margin:14px 0 10px;
+      font-size:34px;
+      line-height:1.10;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      max-width:860px;
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 18px;
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:900;
+      font-size:14px;
+    }
+    .btn.primary{
+      border-color:rgba(96,165,250,.55);
+      background: rgba(96,165,250,.14);
+      box-shadow: 0 10px 30px rgba(96,165,250,.10);
+    }
+    .btn.primary:hover{background: rgba(96,165,250,.18)}
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .proof{
+      margin-top:16px;
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .proof span{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+
+    /* Sections */
+    section{padding:30px 0}
+    .section-title{
+      font-size:24px;
+      margin:0 0 8px;
+      letter-spacing:-.2px;
+    }
+    .section-lead{margin:0 0 16px; color:var(--muted); font-size:15px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .card{
+      background: rgba(15,26,46,.88);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 120px at 18% 0%, rgba(96,165,250,.12), transparent 60%),
+                  radial-gradient(600px 120px at 92% 20%, rgba(94,234,212,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .kicker{
+      font-size:12px; color:var(--muted);
+      text-transform:uppercase; letter-spacing:.16em;
+      margin-bottom:8px;
+    }
+    .card h3{margin:6px 0 6px; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .list{margin:12px 0 0; padding-left:18px; color:var(--muted); font-size:14px}
+    .list li{margin:6px 0}
+    .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+    .badge{
+      font-size:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .span-4{grid-column: span 12}
+    .span-6{grid-column: span 12}
+    .span-12{grid-column: span 12}
+
+    /* Google Form embed */
+    .gform-wrap{
+      border-radius: 16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.02);
+    }
+    .gform-iframe{
+      width:100%;
+      height: 720px;
+      border:0;
+      display:block;
+      background: transparent;
+    }
+    .fallback{
+      margin-top:12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Contact */
+    .contact-grid{display:grid; grid-template-columns: 1fr; gap:12px}
+    .contact-box a{
+      color:var(--text);
+      border-bottom:1px dashed rgba(255,255,255,.25);
+    }
+    .contact-box a:hover{border-bottom-color: rgba(94,234,212,.7)}
+    .contact-item{margin:10px 0; color:var(--muted); font-size:14px}
+    .contact-item b{color:var(--text)}
+    .small{font-size:12px; color:var(--muted); margin-top:10px}
+
+    .footer{
+      padding:24px 0 38px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Breakpoints */
+    @media (min-width: 740px){
+      h1{font-size:44px}
+      .sub{font-size:18px}
+      section{padding:34px 0}
+      .container{padding:0 18px}
+    }
+    @media (min-width: 980px){
+      .span-4{grid-column: span 4}
+      .span-6{grid-column: span 6}
+      .contact-grid{grid-template-columns: 1.2fr .8fr}
+      .gform-iframe{height: 760px;}
+    }
+
+    /* Mobile menu */
+    @media (max-width: 860px){
+      nav ul{
+        display:none;
+        position:absolute;
+        right:0;
+        top:52px;
+        width: min(320px, calc(100vw - 32px));
+        padding:10px;
+        border-radius:16px;
+        border:1px solid rgba(255,255,255,.14);
+        background: rgba(11,18,32,.92);
+        box-shadow: var(--shadow);
+      }
+      nav ul.open{display:flex; flex-direction:column; align-items:stretch}
+      nav a{display:block}
+      .cta{justify-content:center}
+    }
+    @media (min-width: 861px){
+      .menu-btn{display:none}
+    }
+  </style>
 </head>
+
 <body>
-    <div class="grid grid-cols-1 gap-4">
-        <img src="./1.webp" alt="Image 1" class="rounded border-b border-gray-300">
-        <img src="./2.webp" alt="Image 2" class="rounded border-b border-gray-300">
-        <img src="./3.webp" alt="Image 3" class="rounded border-b border-gray-300">
-        <img src="./4.webp" alt="Image 4" class="rounded border-b border-gray-300">
-        <img src="./5.webp" alt="Image 5" class="rounded border-b border-gray-300">
-        <img src="./6.webp" alt="Image 6" class="rounded border-b border-gray-300">
-        <img src="./7.webp" alt="Image 7" class="rounded border-b border-gray-300">
-        <img src="./8.webp" alt="Image 8" class="rounded border-b border-gray-300">
-        <img src="./9.webp" alt="Image 9" class="rounded border-b border-gray-300">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand" aria-label="Site brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-text">
+            <div class="t1">MFGbuddy</div>
+            <div class="t2">AI Consulting Agency</div>
+          </div>
+        </div>
+
+        <nav aria-label="Primary navigation">
+          <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <ul id="menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#usecases">Use-cases</a></li>
+            <li><a href="#how">How we work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a class="cta" href="#contact">Get an AI Fitment Audit</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="AI Consulting Agency for Business">
+      <div class="pill" role="note">
+        <span>Process-first AI</span> <span style="opacity:.6;">•</span>
+        <span>Audit → Proof of Value → Implementation</span> <span style="opacity:.6;">•</span>
+        <span><b>Pune + Remote</b></span>
+      </div>
+
+      <h1>AI Consulting Agency for your business—practical, measurable, deployable</h1>
+
+      <p class="sub">
+        MFGbuddy helps <b>any business</b> improve real workflows (Excel, emails, ERP, WhatsApp, tickets) using practical AI.
+        We identify where AI fits, build a proof of value, and deploy safely—focused on reducing cycle time, errors, and cost.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">Get an AI Fitment Audit</a>
+        <a class="btn" href="#services">View services</a>
+        <a class="btn" href="mailto:ml.aniruddha.kudalkar@gmail.com">Email</a>
+      </div>
+
+      <div class="proof" aria-label="Key selling points">
+        <span>✅ Works for any business function</span>
+        <span>✅ Clear ROI + fast proofs of value</span>
+        <span>✅ Privacy-first options (on-prem / VPC)</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-label="AI consulting services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-lead">Start small, prove value fast, then scale responsibly across your business.</p>
+
+      <div class="grid">
+        <article class="card span-4">
+          <div class="kicker">Best starting point</div>
+          <h3>AI Fitment Audit (10 days)</h3>
+          <p>We map key workflows and recommend exactly where AI fits—plus a roadmap and a mini demo.</p>
+          <ul class="list">
+            <li>Current-state process map + pain-point heatmap</li>
+            <li>Opportunity list (quick wins vs strategic)</li>
+            <li>Mini business case (ROI, effort, risk)</li>
+            <li>One proof-of-value demo (sample data)</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Outcome: clear AI roadmap</span>
+            <span class="badge">Deliverables in 10 days</span>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <div class="kicker">Build & measure impact</div>
+          <h3>Proof of Value (2–6 weeks)</h3>
+          <p>We build a working solution connected to your workflow and measure KPI impact.</p>
+          <ul class="list">
+            <li>Baseline KPI measurement</li>
+            <li>Prototype + user feedback loop</li>
+            <li>Impact report + rollout plan</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Outcome: measurable ROI</span>
+            <span class="badge">Low-risk pilot</span>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <div class="kicker">Production-ready</div>
+          <h3>Implementation & Support</h3>
+          <p>We deploy with governance: security, approvals, monitoring, and training.</p>
+          <ul class="list">
+            <li>Integration: ERP/CRM/email/WhatsApp/tickets</li>
+            <li>Access control + audit logs + approvals</li>
+            <li>Monitoring + continuous improvement</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Outcome: production deployment</span>
+            <span class="badge">Safe + governed AI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- USE CASES (broad, for any business) -->
+    <section id="usecases" aria-label="AI use cases for business">
+      <h2 class="section-title">Common AI opportunities for any business</h2>
+      <p class="section-lead">These are the fastest-to-value areas we typically find during audits.</p>
+
+      <div class="grid">
+        <article class="card span-6">
+          <div class="kicker">Customer support & operations</div>
+          <h3>Speed up response and reduce manual work</h3>
+          <ul class="list">
+            <li>Ticket/email/WhatsApp triage: classify, route, draft replies</li>
+            <li>Call and meeting summaries: action items, risks, follow-ups</li>
+            <li>Internal knowledge search: SOPs, policies, manuals, FAQs</li>
+            <li>Auto-reporting: weekly ops summaries and exceptions</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">KPI: response time</span>
+            <span class="badge">KPI: workload</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <div class="kicker">Back-office & finance</div>
+          <h3>Faster processing with fewer errors</h3>
+          <ul class="list">
+            <li>Document extraction: invoices, POs, forms → structured data</li>
+            <li>Validation checks: mismatches, missing fields, duplicates</li>
+            <li>Approval workflows: summaries and recommended next steps</li>
+            <li>Compliance support: searchable policy assistant with citations</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">KPI: turnaround time</span>
+            <span class="badge">KPI: error rate</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <div class="kicker">Sales & marketing</div>
+          <h3>Convert leads faster</h3>
+          <ul class="list">
+            <li>Lead qualification and follow-up automation</li>
+            <li>Proposal/quotation generation from templates and requirements</li>
+            <li>Customer insights from conversations and CRM notes</li>
+            <li>Forecasting and pipeline risk flags (decision support)</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">KPI: conversion</span>
+            <span class="badge">KPI: sales cycle</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <div class="kicker">Quality, analytics & prediction</div>
+          <h3>Detect issues early</h3>
+          <ul class="list">
+            <li>Anomaly detection: spikes in errors, delays, complaints, or costs</li>
+            <li>Demand/volume forecasting to plan staffing and inventory</li>
+            <li>Root-cause support: clustering reasons and common patterns</li>
+            <li>Dashboards: decision support with alerts and explanations</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">KPI: cost</span>
+            <span class="badge">KPI: stability</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section id="how" aria-label="Engagement method">
+      <h2 class="section-title">How we work</h2>
+      <p class="section-lead">A repeatable method that starts with process waste, not hype.</p>
+
+      <div class="grid">
+        <article class="card span-4">
+          <div class="kicker">Step 1</div>
+          <h3>Define KPI + scope</h3>
+          <p>Pick 1–2 workflows and align on measurable outcomes (time, errors, cost, risk).</p>
+        </article>
+        <article class="card span-4">
+          <div class="kicker">Step 2</div>
+          <h3>Shadow + map</h3>
+          <p>Observe real work and capture tools, exceptions, handoffs, and volumes.</p>
+        </article>
+        <article class="card span-4">
+          <div class="kicker">Step 3</div>
+          <h3>AI fitment + ROI</h3>
+          <p>Prioritize quick wins and estimate effort, risk, and payoff.</p>
+        </article>
+        <article class="card span-6">
+          <div class="kicker">Step 4</div>
+          <h3>Proof of Value</h3>
+          <p>Build a small working demo using sample data and validate with users.</p>
+        </article>
+        <article class="card span-6">
+          <div class="kicker">Step 5</div>
+          <h3>Deploy safely</h3>
+          <p>Integrate into your systems with access control, approvals, monitoring, and training.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-label="About MFGbuddy">
+      <h2 class="section-title">About</h2>
+      <p class="section-lead">
+        MFGbuddy is an AI Consulting Agency led by Aniruddha Kudalkar. We combine process understanding with practical software delivery to help businesses adopt AI safely and profitably.
+      </p>
+      <div class="grid">
+        <article class="card span-12">
+          <div class="kicker">What you can expect</div>
+          <ul class="list">
+            <li>Clear deliverables and timelines (audit → proof → deploy)</li>
+            <li>Business-first communication (no unnecessary jargon)</li>
+            <li>Privacy-first options (on-prem / VPC) with audit logs and approvals where needed</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT (Google Forms integrated) -->
+    <section id="contact" aria-label="Contact MFGbuddy">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lead">Submit an inquiry using the form below (Google Forms). We’ll reply on WhatsApp or email.</p>
+
+      <div class="contact-grid">
+        <div class="card">
+          <div class="kicker">Inquiry form</div>
+
+          <!-- ✅ Google Forms Integration
+               Replace the two placeholder URLs below with your real Google Form URLs.
+               - Embed URL (iframe src): .../viewform?embedded=true
+               - Direct URL (Open Form button): .../viewform
+          -->
+          <div class="gform-wrap" aria-label="Embedded Google Form">
+            <iframe
+              class="gform-iframe"
+              title="Inquiry Form"
+              loading="lazy"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe2KBF2m42g-szwen7ULNSBSWxZhvO8tjQZGr7-u0p_klC0Xw/viewform?embedded=true">
+              Loading…
+            </iframe>
+          </div>
+
+          <div class="fallback">
+            If the form does not load, open it here:
+            <a class="btn" style="margin-top:10px; display:inline-flex;"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSe2KBF2m42g-szwen7ULNSBSWxZhvO8tjQZGr7-u0p_klC0Xw/viewform"
+               target="_blank" rel="noopener">
+              Open Form
+            </a>
+          </div>
+
+          <p class="small">
+            Google Forms stores inquiries inside your Google account (Responses tab) and you can link it to a Google Sheet for easy tracking.
+          </p>
+        </div>
+
+        <aside class="card contact-box">
+          <div class="kicker">Direct contact</div>
+          <h3 style="margin-top:6px">Aniruddha Kudalkar</h3>
+
+          <div class="contact-item"><b>Location:</b> Pune, Maharashtra (works remote too)</div>
+          <div class="contact-item"><b>Mobile (WhatsApp):</b> <a href="tel:+918511103337">+91 85111 03337</a></div>
+          <div class="contact-item"><b>Email:</b> <a href="mailto:ml.aniruddha.kudalkar@gmail.com">ml.aniruddha.kudalkar@gmail.com</a></div>
+
+          <div class="hero-actions" style="margin-top:14px">
+            <a class="btn primary" href="https://wa.me/918511103337" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn" href="mailto:ml.aniruddha.kudalkar@gmail.com">Email</a>
+          </div>
+
+          <p class="small" style="margin-top:14px">
+            WhatsApp message to send: <br />
+            “Hi MFGbuddy, we want an AI Fitment Audit for <i>[process]</i>. Our current pain is <i>[time/errors/cost]</i>.”
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <div>© <span id="y"></span> MFGbuddy • AI Consulting Agency</div>
+        <div>
+          <a href="#services">Services</a> •
+          <a href="#usecases">Use-cases</a> •
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="small" style="margin-top:10px">
+        Note: Results vary by process maturity and data quality. For regulated workflows, deployments use access controls and human approvals.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+
+    function closeMenu(){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.setAttribute('aria-label','Open menu');
+    }
+
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    // close menu on link click (mobile)
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // close menu when clicking outside (mobile)
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('open')) return;
+      const clickedInside = menu.contains(e.target) || btn.contains(e.target);
+      if (!clickedInside) closeMenu();
+    });
+  </script>
 </body>
 </html>
