@@ -6,10 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
 
+  <!-- Emoji favicon (tab icon) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
+
   <!-- Primary SEO -->
   <title>MFGbuddy | AI Consulting Agency for Your Business (Pune, India)</title>
   <meta name="description"
-    content="MFGbuddy is an AI Consulting Agency helping any business improve real workflows with practical AI. AI Fitment Audit, Proof of Value, Implementation & Support. Pune, India." />
+    content="MFGbuddy is an AI Consulting Agency helping any business improve workflows with practical AI. AI Fitment Audit, Proof of Value, Implementation & Support. Pune, India." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://mfgbuddy.com/" />
 
@@ -18,16 +22,15 @@
   <meta property="og:site_name" content="MFGbuddy" />
   <meta property="og:title" content="MFGbuddy | AI Consulting Agency for Your Business" />
   <meta property="og:description"
-    content="Process-first AI consulting for any business: Audit → Proof of Value → Implementation. Pune, India." />
+    content="Increase profits with AI: improve Time • Cost • Quality. Audit → Proof of Value → Deploy. Pune + Remote." />
   <meta property="og:url" content="https://mfgbuddy.com/" />
-  <!-- Replace with a real image on your domain -->
   <meta property="og:image" content="https://mfgbuddy.com/og-image.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MFGbuddy | AI Consulting Agency for Your Business" />
   <meta name="twitter:description"
-    content="Process-first AI consulting for any business: Audit → Proof of Value → Implementation." />
+    content="Increase profits with AI: improve Time • Cost • Quality. Audit → Proof of Value → Deploy." />
   <meta name="twitter:image" content="https://mfgbuddy.com/og-image.jpg" />
 
   <!-- Structured Data (Local SEO) -->
@@ -44,22 +47,18 @@
       "addressCountry": "IN"
     },
     "areaServed": ["Pune", "Maharashtra", "India", "Remote"],
-    "email": "ml.aniruddha.kudalkar@gmail.com",
+    "email": "ai.mfgbuddy@gmail.com",
     "telephone": "+918511103337",
     "url": "https://mfgbuddy.com/",
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "sales",
       "telephone": "+918511103337",
-      "email": "ml.aniruddha.kudalkar@gmail.com",
+      "email": "ai.mfgbuddy@gmail.com",
       "availableLanguage": ["English", "Marathi", "Hindi"]
     }]
   }
   </script>
-
-  <!-- Emoji favicon -->
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
 
   <style>
     :root {
@@ -159,20 +158,18 @@
       min-width: 0;
     }
 
+    /* 🤖 Logo */
     .logo {
-      width: 34px;
-      height: 34px;
+      width: 44px;
+      height: 44px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       background: none;
-      box-shadow: none;
       border: none;
       padding: 0;
       margin: 0;
       flex: 0 0 auto;
-
       font-size: clamp(26px, 5vw, 38px);
       line-height: 1;
     }
@@ -351,6 +348,22 @@
       background: rgba(255, 255, 255, .06)
     }
 
+    .infographic-wrap {
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .infographic-wrap img {
+      width: 100%;
+      height: auto;
+      /* responsive */
+      display: block;
+      object-fit: cover;
+    }
+
     .proof {
       margin-top: 16px;
       display: flex;
@@ -472,6 +485,61 @@
       grid-column: span 12
     }
 
+    /* How we work: Step Label + Image + Description */
+    .step-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .step-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .03);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .step-label b {
+      color: var(--text);
+      letter-spacing: .14em;
+    }
+
+    .step-img {
+      width: 100%;
+      height: 160px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .03);
+      overflow: hidden;
+      margin: 10px 0 12px;
+    }
+
+    .step-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.05) contrast(1.02);
+    }
+
+    /* ✅ Use your own images:
+       Put these files on your hosting:
+       /assets/step1-kpi.jpg
+       /assets/step2-map.jpg
+       /assets/step3-fitment.jpg
+       /assets/step4-pov.jpg
+       /assets/step5-deploy.jpg
+    */
     /* Google Form embed */
     .gform-wrap {
       border-radius: 16px;
@@ -550,6 +618,10 @@
       .container {
         padding: 0 18px
       }
+
+      .step-img {
+        height: 180px
+      }
     }
 
     @media (min-width: 980px) {
@@ -567,6 +639,10 @@
 
       .gform-iframe {
         height: 760px;
+      }
+
+      .step-img {
+        height: 200px
       }
     }
 
@@ -645,8 +721,8 @@
     <!-- HERO -->
     <section class="hero" aria-label="AI Consulting Agency for Business">
       <div class="pill" role="note">
-        <span>Process-first AI</span> <span style="opacity:.6;">•</span>
-        <span>Audit → Proof of Value → Implementation</span> <span style="opacity:.6;">•</span>
+        <span>Profit-focused AI</span> <span style="opacity:.6;">•</span>
+        <span>Audit → Proof of Value → Deploy</span> <span style="opacity:.6;">•</span>
         <span><b>Pune + Remote</b></span>
       </div>
 
@@ -662,13 +738,26 @@
       <div class="hero-actions">
         <a class="btn primary" href="#contact">Get an AI Fitment Audit</a>
         <a class="btn" href="#services">View services</a>
-        <a class="btn" href="mailto:ml.aniruddha.kudalkar@gmail.com">Email</a>
+        <a class="btn" href="mailto:ai.mfgbuddy@gmail.com">Email</a>
       </div>
 
       <div class="proof" aria-label="Key selling points">
-        <span>✅ Works for any business function</span>
-        <span>✅ Clear ROI + fast proofs of value</span>
+        <span>✅ Increase profits with AI</span>
+        <span>✅ Improve Time • Cost • Quality</span>
         <span>✅ Privacy-first options (on-prem / VPC)</span>
+      </div>
+    </section>
+
+    <section id="infographic" aria-label="AI consulting infographic">
+      <div class="card span-12" style="padding:0;">
+        <div class="infographic-wrap">
+          <!-- Put your infographic image here:
+           Upload it to: /assets/infographic.jpg  (recommended)
+           (or change the src to whatever filename you use) -->
+          <img src="./assets/infographics.jpg"
+            alt="Infographic: Audit → Proof of Value → Deploy to increase profits with AI by improving Time, Cost, Quality"
+            loading="lazy" />
+        </div>
       </div>
     </section>
 
@@ -680,7 +769,7 @@
       <div class="grid">
         <article class="card span-4">
           <div class="kicker">Best starting point</div>
-          <h3>AI Fitment Audit (3 days)</h3>
+          <h3>AI Fitment Audit (10 days)</h3>
           <p>We map key workflows and recommend exactly where AI fits—plus a roadmap and a mini demo.</p>
           <ul class="list">
             <li>Current-state process map + pain-point heatmap</li>
@@ -690,13 +779,13 @@
           </ul>
           <div class="badge-row">
             <span class="badge">Outcome: clear AI roadmap</span>
-            <span class="badge">Deliverables in 3 days</span>
+            <span class="badge">Deliverables in 10 days</span>
           </div>
         </article>
 
         <article class="card span-4">
           <div class="kicker">Build & measure impact</div>
-          <h3>Proof of Value (2–4 weeks)</h3>
+          <h3>Proof of Value (2–6 weeks)</h3>
           <p>We build a working solution connected to your workflow and measure KPI impact.</p>
           <ul class="list">
             <li>Baseline KPI measurement</li>
@@ -726,7 +815,7 @@
       </div>
     </section>
 
-    <!-- USE CASES (broad, for any business) -->
+    <!-- USE CASES -->
     <section id="usecases" aria-label="AI use cases for business">
       <h2 class="section-title">Common AI opportunities for any business</h2>
       <p class="section-lead">These are the fastest-to-value areas we typically find during audits.</p>
@@ -741,10 +830,6 @@
             <li>Internal knowledge search: SOPs, policies, manuals, FAQs</li>
             <li>Auto-reporting: weekly ops summaries and exceptions</li>
           </ul>
-          <div class="badge-row">
-            <span class="badge">KPI: response time</span>
-            <span class="badge">KPI: workload</span>
-          </div>
         </article>
 
         <article class="card span-6">
@@ -756,10 +841,6 @@
             <li>Approval workflows: summaries and recommended next steps</li>
             <li>Compliance support: searchable policy assistant with citations</li>
           </ul>
-          <div class="badge-row">
-            <span class="badge">KPI: turnaround time</span>
-            <span class="badge">KPI: error rate</span>
-          </div>
         </article>
 
         <article class="card span-6">
@@ -771,10 +852,6 @@
             <li>Customer insights from conversations and CRM notes</li>
             <li>Forecasting and pipeline risk flags (decision support)</li>
           </ul>
-          <div class="badge-row">
-            <span class="badge">KPI: conversion</span>
-            <span class="badge">KPI: sales cycle</span>
-          </div>
         </article>
 
         <article class="card span-6">
@@ -786,53 +863,77 @@
             <li>Root-cause support: clustering reasons and common patterns</li>
             <li>Dashboards: decision support with alerts and explanations</li>
           </ul>
-          <div class="badge-row">
-            <span class="badge">KPI: cost</span>
-            <span class="badge">KPI: stability</span>
-          </div>
         </article>
       </div>
     </section>
 
-    <!-- HOW WE WORK -->
+    <!-- HOW WE WORK (Step Label + Image + Description) -->
     <section id="how" aria-label="Engagement method">
       <h2 class="section-title">How we work</h2>
       <p class="section-lead">A repeatable method that starts with process waste, not hype.</p>
 
       <div class="grid">
         <article class="card span-4">
-          <div class="kicker">Step 1</div>
-          <h3>Define KPI + scope</h3>
+          <div class="step-top">
+            <div class="step-label"><b>Step 1</b> • Define KPI + scope</div>
+          </div>
+          <div class="step-img">
+            <img src="./assets/step1-kpi.jpg" alt="Define KPI and scope for the AI engagement">
+          </div>
           <p>Pick 1–2 workflows and align on measurable outcomes (time, errors, cost, risk).</p>
         </article>
+
         <article class="card span-4">
-          <div class="kicker">Step 2</div>
-          <h3>Shadow + map</h3>
+          <div class="step-top">
+            <div class="step-label"><b>Step 2</b> • Shadow + map</div>
+          </div>
+          <div class="step-img">
+            <img src="./assets/step2-map.jpg" alt="Shadow teams and map the current workflow">
+          </div>
           <p>Observe real work and capture tools, exceptions, handoffs, and volumes.</p>
         </article>
+
         <article class="card span-4">
-          <div class="kicker">Step 3</div>
-          <h3>AI fitment + ROI</h3>
+          <div class="step-top">
+            <div class="step-label"><b>Step 3</b> • AI fitment + ROI</div>
+          </div>
+          <div class="step-img">
+            <img src="./assets/step3-fitment.jpg" alt="Identify AI fitment and estimate ROI">
+          </div>
           <p>Prioritize quick wins and estimate effort, risk, and payoff.</p>
         </article>
+
         <article class="card span-6">
-          <div class="kicker">Step 4</div>
-          <h3>Proof of Value</h3>
+          <div class="step-top">
+            <div class="step-label"><b>Step 4</b> • Proof of Value</div>
+          </div>
+          <div class="step-img">
+            <img src="./assets/step4-pov.jpg" alt="Build and validate a proof of value">
+          </div>
           <p>Build a small working demo using sample data and validate with users.</p>
         </article>
+
         <article class="card span-6">
-          <div class="kicker">Step 5</div>
-          <h3>Deploy safely</h3>
+          <div class="step-top">
+            <div class="step-label"><b>Step 5</b> • Deploy safely</div>
+          </div>
+          <div class="step-img">
+            <img src="./assets/step5-deploy.jpg" alt="Deploy AI safely with governance and monitoring">
+          </div>
           <p>Integrate into your systems with access control, approvals, monitoring, and training.</p>
         </article>
       </div>
+
     </section>
 
     <!-- ABOUT -->
     <section id="about" aria-label="About MFGbuddy">
       <h2 class="section-title">About</h2>
       <p class="section-lead">
-       MFGbuddy is an AI Consulting Agency focused on measurable business impact. With 15+ years of experience in AI engineering and consulting, we help organisations identify high-ROI AI opportunities, validate them through proofs of value, and deploy responsibly with governance and security.
+        MFGbuddy is an AI Consulting Agency. We combine process understanding with practical software delivery to help
+        businesses adopt AI safely and profitably.
+        With 15+ years of experience in AI engineering and consultation, we focus on measurable outcomes—improving time,
+        cost, and quality.
       </p>
       <div class="grid">
         <article class="card span-12">
@@ -856,11 +957,6 @@
         <div class="card">
           <div class="kicker">Inquiry form</div>
 
-          <!-- ✅ Google Forms Integration
-               Replace the two placeholder URLs below with your real Google Form URLs.
-               - Embed URL (iframe src): .../viewform?embedded=true
-               - Direct URL (Open Form button): .../viewform
-          -->
           <div class="gform-wrap" aria-label="Embedded Google Form">
             <iframe class="gform-iframe" title="Inquiry Form" loading="lazy"
               src="https://docs.google.com/forms/d/e/1FAIpQLSe2KBF2m42g-szwen7ULNSBSWxZhvO8tjQZGr7-u0p_klC0Xw/viewform?embedded=true">
@@ -885,10 +981,10 @@
 
         <aside class="card contact-box">
           <div class="kicker">Direct contact</div>
-          <h3 style="margin-top:6px">Our AI Engineer</h3>
+          <h3 style="margin-top:6px">MFGbuddy</h3>
 
           <div class="contact-item"><b>Location:</b> Pune, Maharashtra (works remote too)</div>
-          <div class="contact-item"><b>Mobile (WhatsApp):</b> <a href="tel:+918511103337">+91 85111 03337</a></div>
+          <div class="contact-item"><b>Mobile:</b> <a href="tel:+918511103337">+91 85111 03337</a></div>
           <div class="contact-item"><b>Email:</b> <a href="mailto:ai.mfgbuddy@gmail.com">ai.mfgbuddy@gmail.com</a></div>
 
           <div class="hero-actions" style="margin-top:14px">
