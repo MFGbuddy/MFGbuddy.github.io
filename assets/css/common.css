@@ -528,7 +528,14 @@ section{ padding:30px 0; }
   gap:14px;
 }
 
+/* Default: rows are BLOCK so text separators (•) don't become flex items */
 .footer .container > div{
+  display:block;
+}
+
+/* Row 1 and Row 2: use flex layout */
+.footer .container > div:nth-of-type(1),
+.footer .container > div:nth-of-type(2){
   display:flex;
   flex-wrap:wrap;
   gap:10px 14px;
@@ -536,16 +543,15 @@ section{ padding:30px 0; }
   justify-content:space-between;
 }
 
-/* Links row wraps nicely */
+/* Row 3: quick links - keep inline flow, wrap naturally */
 .footer .container > div:nth-of-type(3){
-  justify-content:flex-start;
-  line-height:1.9;
+  line-height:0.7;
 }
 
-/* Footer links as touch-friendly chips */
+/* Footer links: touch-friendly chips */
 .footer a{
   color: var(--muted);
-  padding: 6px 8px;
+  padding: 3px 3px;
   border-radius: 10px;
   border: 1px solid transparent;
   display:inline-flex;
@@ -558,20 +564,21 @@ section{ padding:30px 0; }
 }
 .footer strong{ color: var(--text); }
 
+/* Mobile: stack row 1 and row 2 nicely */
 @media (max-width: 740px){
-  .footer .container > div{
+  .footer .container > div:nth-of-type(1),
+  .footer .container > div:nth-of-type(2){
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-start;
   }
-  .footer .container > div:nth-of-type(2){
-    gap:8px;
-  }
-  .footer .container > div:nth-of-type(3) a{
-    margin: 2px 0;
-  }
 }
+
+/* Desktop: slightly tighter */
 @media (min-width: 980px){
   .footer .container{ gap:12px; }
-  .footer .container > div{ gap:8px 14px; }
+  .footer .container > div:nth-of-type(1),
+  .footer .container > div:nth-of-type(2){
+    gap:8px 14px;
+  }
 }
