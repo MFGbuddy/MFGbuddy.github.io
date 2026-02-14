@@ -60,628 +60,9 @@
   }
   </script>
 
-  <style>
-    :root {
-      --bg: #0b1220;
-      --card: #0f1a2e;
-      --muted: #9fb0d0;
-      --text: #e9f0ff;
-      --accent: #5eead4;
-      --accent2: #60a5fa;
-      --border: rgba(255, 255, 255, .12);
-      --shadow: 0 12px 40px rgba(0, 0, 0, .35);
-      --radius: 18px;
-      --max: 1120px;
-    }
+   <!-- Common CSS -->
+  <link rel="stylesheet" href="assets/css/common.css" />
 
-    * {
-      box-sizing: border-box
-    }
-
-    html {
-      scroll-behavior: smooth
-    }
-
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background:
-        radial-gradient(1000px 600px at 18% -10%, rgba(96, 165, 250, .26), transparent 60%),
-        radial-gradient(900px 520px at 92% 10%, rgba(94, 234, 212, .18), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none
-    }
-
-    a:hover {
-      opacity: .95
-    }
-
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 16px
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-
-    .skip-link:focus {
-      left: 16px;
-      top: 14px;
-      width: auto;
-      height: auto;
-      padding: 10px 12px;
-      background: #000;
-      color: #fff;
-      border-radius: 10px;
-      z-index: 9999;
-    }
-
-    /* Nav */
-    header.nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 18, 32, .82);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      gap: 12px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: .2px;
-      min-width: 0;
-    }
-
-    /* 🤖 Logo */
-    .logo {
-      width: 44px;
-      height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      border: none;
-      padding: 0;
-      margin: 0;
-      flex: 0 0 auto;
-      font-size: clamp(26px, 5vw, 38px);
-      line-height: 1;
-    }
-
-    .logo::before {
-      content: "🤖";
-    }
-
-    .brand-text {
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-text .t1 {
-      font-size: 14px;
-      opacity: .98;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .brand-text .t2 {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 900;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    nav {
-      position: relative
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: var(--text);
-      border-color: rgba(255, 255, 255, .10);
-      background: rgba(255, 255, 255, .04);
-    }
-
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(94, 234, 212, .45);
-      background: rgba(94, 234, 212, .08);
-      color: var(--text);
-      font-weight: 900;
-      font-size: 14px;
-      box-shadow: 0 10px 30px rgba(94, 234, 212, .08);
-      white-space: nowrap;
-    }
-
-    .cta:hover {
-      background: rgba(94, 234, 212, .12)
-    }
-
-    /* Mobile menu */
-    .menu-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, .14);
-      background: rgba(255, 255, 255, .04);
-      color: var(--text);
-      cursor: pointer;
-    }
-
-    .menu-btn:hover {
-      background: rgba(255, 255, 255, .06)
-    }
-
-    .menu-btn svg {
-      width: 20px;
-      height: 20px
-    }
-
-    /* Hero */
-    main {
-      padding-bottom: 40px
-    }
-
-    .hero {
-      padding: 42px 0 22px
-    }
-
-    .pill {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      border: 1px solid rgba(255, 255, 255, .14);
-      background: rgba(255, 255, 255, .04);
-      color: var(--muted);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      flex-wrap: wrap;
-    }
-
-    .pill b {
-      color: var(--text)
-    }
-
-    h1 {
-      margin: 14px 0 10px;
-      font-size: 34px;
-      line-height: 1.10;
-      letter-spacing: -.6px;
-    }
-
-    .sub {
-      max-width: 860px;
-      color: var(--muted);
-      font-size: 16px;
-      margin: 0 0 18px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 14px
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, .14);
-      background: rgba(255, 255, 255, .04);
-      color: var(--text);
-      font-weight: 900;
-      font-size: 14px;
-    }
-
-    .btn.primary {
-      border-color: rgba(96, 165, 250, .55);
-      background: rgba(96, 165, 250, .14);
-      box-shadow: 0 10px 30px rgba(96, 165, 250, .10);
-    }
-
-    .btn.primary:hover {
-      background: rgba(96, 165, 250, .18)
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, .06)
-    }
-
-    .infographic-wrap {
-      width: 100%;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .03);
-    }
-
-    .infographic-wrap img {
-      width: 100%;
-      height: auto;
-      /* responsive */
-      display: block;
-      object-fit: cover;
-    }
-
-    .proof {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .proof span {
-      border: 1px solid rgba(255, 255, 255, .10);
-      background: rgba(255, 255, 255, .03);
-      padding: 8px 10px;
-      border-radius: 999px;
-    }
-
-    /* Sections */
-    section {
-      padding: 30px 0
-    }
-
-    .section-title {
-      font-size: 24px;
-      margin: 0 0 8px;
-      letter-spacing: -.2px;
-    }
-
-    .section-lead {
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 15px
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 12px;
-    }
-
-    .card {
-      background: rgba(15, 26, 46, .88);
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:before {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      background: radial-gradient(600px 120px at 18% 0%, rgba(96, 165, 250, .12), transparent 60%),
-        radial-gradient(600px 120px at 92% 20%, rgba(94, 234, 212, .10), transparent 60%);
-      pointer-events: none;
-    }
-
-    .card>* {
-      position: relative
-    }
-
-    .kicker {
-      font-size: 12px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      margin-bottom: 8px;
-    }
-
-    .card h3 {
-      margin: 6px 0 6px;
-      font-size: 18px
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px
-    }
-
-    .list {
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 14px
-    }
-
-    .list li {
-      margin: 6px 0
-    }
-
-    .badge-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px
-    }
-
-    .badge {
-      font-size: 12px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .03);
-      color: var(--muted);
-      padding: 6px 10px;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-
-    .span-4 {
-      grid-column: span 12
-    }
-
-    .span-6 {
-      grid-column: span 12
-    }
-
-    .span-12 {
-      grid-column: span 12
-    }
-
-    /* How we work: Step Label + Image + Description */
-    .step-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .step-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .03);
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .step-label b {
-      color: var(--text);
-      letter-spacing: .14em;
-    }
-
-    .step-img {
-      width: 100%;
-      height: 160px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .03);
-      overflow: hidden;
-      margin: 10px 0 12px;
-    }
-
-    .step-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.05) contrast(1.02);
-    }
-
-    /* ✅ Use your own images:
-       Put these files on your hosting:
-       /assets/step1-kpi.jpg
-       /assets/step2-map.jpg
-       /assets/step3-fitment.jpg
-       /assets/step4-pov.jpg
-       /assets/step5-deploy.jpg
-    */
-    /* Google Form embed */
-    .gform-wrap {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .02);
-    }
-
-    .gform-iframe {
-      width: 100%;
-      height: 720px;
-      border: 0;
-      display: block;
-      background: transparent;
-    }
-
-    .fallback {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px
-    }
-
-    .contact-box a {
-      color: var(--text);
-      border-bottom: 1px dashed rgba(255, 255, 255, .25);
-    }
-
-    .contact-box a:hover {
-      border-bottom-color: rgba(94, 234, 212, .7)
-    }
-
-    .contact-item {
-      margin: 10px 0;
-      color: var(--muted);
-      font-size: 14px
-    }
-
-    .contact-item b {
-      color: var(--text)
-    }
-
-    .small {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 10px
-    }
-
-    .footer {
-      padding: 24px 0 38px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* Breakpoints */
-    @media (min-width: 740px) {
-      h1 {
-        font-size: 44px
-      }
-
-      .sub {
-        font-size: 18px
-      }
-
-      section {
-        padding: 34px 0
-      }
-
-      .container {
-        padding: 0 18px
-      }
-
-      .step-img {
-        height: 180px
-      }
-    }
-
-    @media (min-width: 980px) {
-      .span-4 {
-        grid-column: span 4
-      }
-
-      .span-6 {
-        grid-column: span 6
-      }
-
-      .contact-grid {
-        grid-template-columns: 1.2fr .8fr
-      }
-
-      .gform-iframe {
-        height: 760px;
-      }
-
-      .step-img {
-        height: 200px
-      }
-    }
-
-    /* Mobile menu */
-    @media (max-width: 860px) {
-      nav ul {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 52px;
-        width: min(320px, calc(100vw - 32px));
-        padding: 10px;
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, .14);
-        background: rgba(11, 18, 32, .92);
-        box-shadow: var(--shadow);
-      }
-
-      nav ul.open {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch
-      }
-
-      nav a {
-        display: block
-      }
-
-      .cta {
-        justify-content: center
-      }
-    }
-
-    @media (min-width: 861px) {
-      .menu-btn {
-        display: none
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -753,13 +134,14 @@
       </div>
     </section>
 
+    <!-- INFOGRAPHIC -->
     <section id="infographic" aria-label="AI consulting infographic">
       <div class="card span-12" style="padding:0;">
         <div class="infographic-wrap">
           <!-- Put your infographic image here:
            Upload it to: /assets/infographic.jpg  (recommended)
            (or change the src to whatever filename you use) -->
-          <img src="./assets/infographics.jpg"
+          <img src="assets/images/infographics.jpg"
             alt="Infographic: Audit → Proof of Value → Deploy to increase profits with AI by improving Time, Cost, Quality"
             loading="lazy" />
         </div>
@@ -945,7 +327,7 @@
             <div class="step-label"><b>Step 1</b> • Define KPI + scope</div>
           </div>
           <div class="step-img">
-            <img src="./assets/step1-kpi.jpg" alt="Define KPI and scope for the AI engagement">
+            <img src="assets/images/step1-kpi.jpg" alt="Define KPI and scope for the AI engagement">
           </div>
           <p>Choose 1–2 workflows and agree on measurable outcomes before building anything—cycle time reduction, fewer
             errors, cost reduction, risk reduction, or better compliance.</p>
@@ -956,7 +338,7 @@
             <div class="step-label"><b>Step 2</b> • Shadow + map</div>
           </div>
           <div class="step-img">
-            <img src="./assets/step2-map.jpg" alt="Shadow teams and map the current workflow">
+            <img src="assets/images/step2-map.jpg" alt="Shadow teams and map the current workflow">
           </div>
           <p>We observe how work actually happens and capture the “real world” details: tools used (Excel, email, ERP,
             WhatsApp, ticketing etc), exceptions, handoffs, volumes, and rework points.</p>
@@ -967,7 +349,7 @@
             <div class="step-label"><b>Step 3</b> • AI fitment + ROI</div>
           </div>
           <div class="step-img">
-            <img src="./assets/step3-fitment.jpg" alt="Identify AI fitment and estimate ROI">
+            <img src="assets/images/step3-fitment.jpg" alt="Identify AI fitment and estimate ROI">
           </div>
           <p>We shortlist the best AI opportunities and prioritize what to do first using impact vs effort vs risk. You
             get ROI sizing, data readiness needs, and a clear plan for quick wins vs strategic initiatives.</p>
@@ -978,7 +360,7 @@
             <div class="step-label"><b>Step 4</b> • Proof of Value</div>
           </div>
           <div class="step-img">
-            <img src="./assets/step4-pov.jpg" alt="Build and validate a proof of value">
+            <img src="assets/images/step4-pov.jpg" alt="Build and validate a proof of value">
           </div>
           <p>We build a small working pilot using sample or anonymized data, validate it with users, and measure
             improvements against the baseline KPI—so the scale decision is evidence-based.</p>
@@ -989,7 +371,7 @@
             <div class="step-label"><b>Step 5</b> • Deploy safely</div>
           </div>
           <div class="step-img">
-            <img src="./assets/step5-deploy.jpg" alt="Deploy AI safely with governance and monitoring">
+            <img src="assets/images/step5-deploy.jpg" alt="Deploy AI safely with governance and monitoring">
           </div>
           <p>We integrate into your systems and deploy with governance: role-based access control, audit logs, approvals
             where needed, monitoring, and training—so it runs reliably in daily operations and improves over time.</p>
@@ -1124,38 +506,8 @@
 
     </div>
   </footer>
-
-
-  <script>
-    // current year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('menu');
-
-    function closeMenu() {
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.setAttribute('aria-label', 'Open menu');
-    }
-
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-
-    // close menu on link click (mobile)
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-    // close menu when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-      if (!menu.classList.contains('open')) return;
-      const clickedInside = menu.contains(e.target) || btn.contains(e.target);
-      if (!clickedInside) closeMenu();
-    });
-  </script>
+  <!-- Common JS -->
+  <script src="assets/js/common.js" defer></script>
 </body>
 
 </html>
