@@ -714,7 +714,8 @@ details.faq[open] {
     justify-content: space-between;
     gap: 12px;
     font-weight: 650;
-    color: var(--text);
+    color: var(--muted);
+    font-size: 15px;
 }
 
 .faq__q::-webkit-details-marker {
@@ -734,7 +735,8 @@ details.faq[open] .faq__q::after {
 
 .faq__a {
     margin-top: 10px;
-    color: rgba(233, 240, 255, .86);
+    color: var(--muted);
+    font-size: 14px;
     line-height: 1.6;
 }
 
