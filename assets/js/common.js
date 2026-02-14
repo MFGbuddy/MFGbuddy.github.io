@@ -47,3 +47,32 @@
     if (e.key === "Escape" && menu.classList.contains("open")) closeMenu();
   });
 })();
+
+// Lazy-load Google Form iframe only when visible (improves FCP/LCP)
+(function () {
+  const iframe = document.querySelector(".gform-iframe[data-src]");
+  if (!iframe) return;
+
+  const load = () => {
+    if (iframe.dataset.loaded) return;
+    iframe.src = iframe.dataset.src;
+    iframe.dataset.loaded = "1";
+  };
+
+  // If IntersectionObserver is supported, load when near viewport
+  if ("IntersectionObserver" in window) {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+          load();
+          obs.disconnect();
+        }
+      },
+      { root: null, rootMargin: "300px 0px", threshold: 0.01 } // preload slightly before visible
+    );
+    obs.observe(iframe);
+  } else {
+    // Fallback: load after a short delay
+    window.addEventListener("load", () => setTimeout(load, 1200), { once: true });
+  }
+})();
