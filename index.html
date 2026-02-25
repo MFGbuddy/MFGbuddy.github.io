@@ -35,30 +35,205 @@
 
   <!-- Structured Data (Local SEO) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MFGbuddy - AI Consulting Agency",
-    "description": "MFGbuddy is an AI consulting agency helping any business improve workflows using practical AI. Services include AI Fitment Audit, Proof of Value, Implementation, and Support.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "areaServed": ["Pune", "Maharashtra", "India", "Remote"],
-    "email": "ai.mfgbuddy@gmail.com",
-    "telephone": "+918511103337",
-    "url": "https://mfgbuddy.com/",
-    "contactPoint": [{
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://mfgbuddy.com/#organization",
+  "name": "MFGbuddy",
+  "url": "https://mfgbuddy.com/",
+  "description": "MFGbuddy is an AI consulting agency based in Pune, India. We help businesses identify high-ROI AI opportunities, run measurable Proof of Value pilots, and support production implementation with governance, approvals, and monitoring.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Pune" },
+    { "@type": "State", "name": "Maharashtra" },
+    { "@type": "Country", "name": "India" },
+    { "@type": "Place", "name": "Worldwide" }
+  ],
+  "telephone": "+918511103337",
+  "email": "ai.mfgbuddy@gmail.com",
+  "contactPoint": [
+    {
       "@type": "ContactPoint",
       "contactType": "sales",
       "telephone": "+918511103337",
       "email": "ai.mfgbuddy@gmail.com",
-      "availableLanguage": ["English", "Marathi", "Hindi"]
-    }]
-  }
-  </script>
+      "availableLanguage": ["English", "Hindi", "Marathi"]
+    }
+  ]
+}
+</script>
+
+  <!-- Structured Data: FAQPage (Homepage FAQ Section) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does MFGbuddy do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We help teams identify high-return Artificial Intelligence use cases, run a measurable pilot, and support production implementation—focused on time saved, cost reduction, and quality improvements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is MFGbuddy best suited for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teams with workflow-heavy operations where people spend time on repetitive decisions, manual data handling, triage, approvals, reporting, and follow-ups—especially when work happens across email, spreadsheets, chats, and multiple tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of problems do you solve with Artificial Intelligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical problems include ticket and query triage, document data extraction, internal knowledge search, report generation, summarizing and drafting responses, quality checks, and automation of multi-step workflows with human approvals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build products or provide consulting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do both. We provide consulting (audit, pilot, and implementation planning) and we also build and integrate working solutions when required—along with measurable outcome tracking—so your team can adopt Artificial Intelligence safely and effectively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in AI Bootcamps & Coaching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Team training plus hands-on guidance to identify use cases, design safe workflows, evaluate tools, and create a pilot plan that can be executed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work only in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We’re based in Pune, India, and we deliver work in Pune on-site when needed. We also work remotely with teams across India and globally."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Structured Data: Services Summary (Homepage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://mfgbuddy.com/#services-list",
+  "name": "MFGbuddy Services",
+  "description": "Homepage summary of MFGbuddy AI consulting services.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "@id": "https://mfgbuddy.com/#service-ai-fitment-audit",
+        "name": "AI Fitment Audit",
+        "description": "A 5-day AI fitment audit to identify high-ROI AI opportunities, map workflows, assess data readiness, and deliver a prioritized roadmap with governance considerations.",
+        "provider": {
+          "@id": "https://mfgbuddy.com/#organization"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Pune" },
+          { "@type": "State", "name": "Maharashtra" },
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        },
+        "serviceType": "AI consulting audit",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "@id": "https://mfgbuddy.com/#service-proof-of-value",
+        "name": "Proof of Value",
+        "description": "A 2–6 week pilot to validate AI impact on a real workflow with KPI baseline, user validation, and before/after measurement for evidence-based scale decisions.",
+        "provider": {
+          "@id": "https://mfgbuddy.com/#organization"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Pune" },
+          { "@type": "State", "name": "Maharashtra" },
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "serviceType": "AI pilot implementation",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "@id": "https://mfgbuddy.com/#service-implementation-support",
+        "name": "Implementation & Support",
+        "description": "Production AI deployment support including integrations, governance controls, approvals, monitoring, quality checks, training, and rollout support.",
+        "provider": {
+          "@id": "https://mfgbuddy.com/#organization"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Pune" },
+          { "@type": "State", "name": "Maharashtra" },
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "serviceType": "AI implementation and support",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "@id": "https://mfgbuddy.com/#service-ai-bootcamps-coaching",
+        "name": "AI Bootcamps & Coaching",
+        "description": "Practical AI training and coaching for business teams and engineers focused on real workflows, measurable outcomes, governance, and adoption.",
+        "provider": {
+          "@id": "https://mfgbuddy.com/#organization"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Pune" },
+          { "@type": "State", "name": "Maharashtra" },
+          { "@type": "Country", "name": "India" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "serviceType": "AI training and coaching",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }
+  ]
+}
+</script>
 
   <!-- Common CSS -->
   <link rel="stylesheet" href="assets/css/common.css" />
