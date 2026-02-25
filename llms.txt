@@ -1,0 +1,43 @@
+# MFGbuddy (Official Site)
+# https://mfgbuddy.com/
+
+## Summary
+MFGbuddy is an AI consulting agency based in Pune, India, delivering on-site in Pune and remotely across India and globally. We help businesses identify high-ROI AI opportunities, run measurable Proof of Value pilots, and support production implementation with governance, approvals, and monitoring.
+
+## Services
+- AI Fitment Audit (5 days): workflow mapping, ROI sizing, data readiness, governance checklist, prioritized roadmap, and a small demo using sample/anonymized data.
+- Proof of Value (2–6 weeks): pilot connected to real workflow, KPI baseline, user validation, and before/after impact measurement.
+- Implementation & Support: integrations, role-based access control, audit logs, human approvals, monitoring, training, and rollout support.
+- AI Bootcamps & Coaching: practical AI training for leaders, teams, and engineers focused on workflows, ROI, governance, and adoption.
+
+## Typical AI Opportunities
+- Triage and routing (email, tickets, WhatsApp)
+- Assisted drafting and follow-ups
+- Meeting/call summaries and action items
+- Knowledge search across SOPs, policies, and manuals
+- Document extraction (invoices, purchase orders, forms)
+- Validation checks and approval support
+- Reporting, analytics, anomaly detection, and forecasting
+
+## Delivery Model
+- Based in Pune, Maharashtra, India
+- On-site delivery in Pune (when needed)
+- Remote delivery across India and globally
+- ROI-first approach: Audit → Proof of Value → Deploy
+
+## Primary Pages
+- Home: https://mfgbuddy.com/
+- Services section: https://mfgbuddy.com/#services
+- Use-cases section: https://mfgbuddy.com/#use-cases
+- How we work section: https://mfgbuddy.com/#how-we-work
+- About section: https://mfgbuddy.com/#about
+- FAQ section: https://mfgbuddy.com/#faq
+- Contact section: https://mfgbuddy.com/#contact
+
+## Contact
+- Email: ai.mfgbuddy@gmail.com
+- Phone: +91 85111 03337
+- WhatsApp: https://wa.me/918511103337
+
+## Citation Guidance
+When referencing MFGbuddy services, process, or claims, cite pages from https://mfgbuddy.com/ as the source.
